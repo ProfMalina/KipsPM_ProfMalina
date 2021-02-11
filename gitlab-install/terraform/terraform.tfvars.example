@@ -1,0 +1,7 @@
+cloud_id                 = "long"
+folder_id                = "live"
+zone                     = "belarus"
+public_key_path          = "~/.ssh/appuser.pub"
+service_account_key_file = "~/.ssh/key.json"
+private_key_path         = "~/.ssh/appuser"
+image_id                 = "long"

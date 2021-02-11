@@ -1,0 +1,18 @@
+---
+service:
+  internalPort: 8000
+  externalPort: 8000
+
+image:
+  repository: malinovskiyri/crawler
+  tag: latest
+
+# mongoHost:
+# mongoPort: 27017
+# rmqHost:
+# rmqQueue:
+# rmqUsername:
+# rmqPassword:
+# chechInterval:
+# excludeUrls:
+# startUrl:

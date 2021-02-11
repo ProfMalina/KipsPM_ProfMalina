@@ -1,0 +1,3 @@
+---
+- name: reload gitlab
+  systemd: name=gitlab state=restarted

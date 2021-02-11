@@ -1,0 +1,19 @@
+---
+- name: Download script.deb.sh
+  get_url:
+    url: "https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh"
+    dest: "/home/{{ deploy_user }}/gitlab.sh"
+    mode: "0764"
+    owner: "{{ deploy_user }}"
+    group: "{{ deploy_user }}"
+
+- name: Execute gitlab.sh for add the GitLab package repository and install the package
+  shell:
+    cmd: "/home/{{ deploy_user }}/gitlab.sh"
+
+- name: Install Gitlab
+  apt: 
+    name: gitlab-ce
+    update_cache: yes
+  environment: 
+    EXTERNAL_URL: "https://gitlab.{{ ansible_host }}.sslip.io"

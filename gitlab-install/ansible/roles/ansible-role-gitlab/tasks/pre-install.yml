@@ -1,0 +1,10 @@
+- name: Install ruby, bundler and other soft
+  apt: "name={{ item }} state=present update_cache=yes"
+  with_items:
+  - apt-transport-https
+  - curl
+  - openssh-server
+  - ca-certificates
+  - perl
+  - postfix
+  tags: pre-install
